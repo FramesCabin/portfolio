@@ -1,17 +1,22 @@
+/* Reset default margins */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('images/texture_paper.jpg') repeat;
+    
+    /* Set SVG as background */
+    background: url('images/fondo.svg') repeat;
     background-size: cover;
+    background-color: #FAF3E0; /* Backup color */
     color: #333; /* Dark text for contrast */
 }
 
+/* Content container */
 .container {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(255, 255, 240, 0.9); /* Slight transparency */
+    background: rgba(255, 255, 240, 0.9); /* Slight transparency for depth */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
