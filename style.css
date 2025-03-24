@@ -43,14 +43,16 @@
 }
 
 .homepage .text-wrapper-2 {
-  font-family: "Space Mono-Regular", Helvetica;
+  font-family: "Space Mono", monospace;
   color: #000000;
+  font-style: normal;
   font-size: 24px;
 }
 
 .homepage .text-wrapper-3 {
-  font-family: "Space Mono-Regular", Helvetica;
+  font-family: "Space Mono", monospace;
   color: #000000;
+  font-style: normal;
   font-size: 16px;
 }
 
@@ -101,10 +103,11 @@
 }
 
 .homepage .text-wrapper-4 {
-  font-family: "Space Mono-Regular", Helvetica;
+  font-family: "Space Mono", monospace;
   font-weight: 400;
   color: #ffffff;
   font-size: 32px;
+  font-style: normal;
   letter-spacing: 0;
 }
 
