@@ -1,185 +1,216 @@
-/* Add font files for Mulish */
-@font-face {
-  font-family: 'Mulish';
-  src: url('fonts/mulish.woff2') format('woff2'),
-       url('fonts/mulish.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-/* Add font files for Space Mono */
-@font-face {
-  font-family: 'Space Mono';
-  src: url('fonts/space-mono.woff2') format('woff2'),
-       url('fonts/space-mono.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-:root {
-  --font-family-mulish: 'Mulish', sans-serif;
-  --font-family-space-mono: 'Space Mono', sans-serif;
-  --text-rgb-0-150-125: rgba(0, 150, 125, 1);
-  --text-black: rgba(0, 0, 0, 1);
-  --text-white: rgba(255, 255, 255, 1);
-}
-
-.text-rgb-0-150-125 {
-  color: var(--text-rgb-0-150-125);
-}
-
-.text-black {
-  color: var(--text-black);
-}
-
-.text-white {
-  color: var(--text-white);
-}
-
-
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+.homepage {
+  background-color: #f5e7d3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+.homepage .div {
+  background-color: #f5e7d3;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
 }
 
-.text-2 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-mulish);
-  font-weight: normal;
+.homepage .frames-cabin {
+  position: absolute;
+  width: 547px;
+  top: 117px;
+  left: 120px;
+  font-family: "Mulish-Black", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.homepage .text-wrapper {
+  font-family: "Mulish-BlackItalic", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #00967d;
+}
+
+.homepage .span {
+  font-family: "Mulish-BlackItalic", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #000000;
   font-size: 32px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-rgb-0-150-125);
-  font-family: var(--font-family-mulish);
-  font-weight: normal;
-  font-size: 32px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-  font-family: var(--font-family-space-mono);
-  font-weight: normal;
+}
+
+.homepage .text-wrapper-2 {
+  font-family: "Space Mono-Regular", Helvetica;
+  color: #000000;
   font-size: 24px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
-  font-family: var(--font-family-space-mono);
-  font-weight: normal;
+}
+
+.homepage .text-wrapper-3 {
+  font-family: "Space Mono-Regular", Helvetica;
+  color: #000000;
   font-size: 16px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-black);
 }
 
-.frame-12-4 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(245, 185, 43, 1);
+.homepage .frame {
+  position: absolute;
+  width: 1200px;
+  height: 312px;
+  top: 239px;
+  left: 120px;
+  background-color: #da6916;
+  border-radius: 200px;
+  overflow: hidden;
+}
+
+.homepage .overlap-group {
+  position: absolute;
+  width: 292px;
+  height: 292px;
+  top: 10px;
+  left: 10px;
+  background-color: #f5b92b;
   border-radius: 200px;
 }
 
-.text-5 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  font-family: var(--font-family-space-mono);
-  font-weight: normal;
+.homepage .frame-2 {
+  position: relative;
+  width: 272px;
+  height: 272px;
+  top: 10px;
+  left: 10px;
+  border-radius: 200px;
+  background-image: url(./images/frame-11-6.JPG);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.homepage .hello-there-welcome {
+  position: absolute;
+  width: 726px;
+  top: 48px;
+  left: 356px;
+  font-family: "Space Mono-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
   font-size: 32px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-white);
-  font-family: var(--font-family-space-mono);
-  font-weight: normal;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.homepage .text-wrapper-4 {
+  font-family: "Space Mono-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+}
+
+.homepage .text-wrapper-5 {
   font-size: 16px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-white);
-  font-family: var(--font-family-space-mono);
-  font-weight: normal;
+}
+
+.homepage .div-wrapper {
+  position: absolute;
+  width: 314px;
+  height: 314px;
+  top: 631px;
+  left: 1006px;
+  background-color: #f5b92b;
+  border-radius: 200px;
+  overflow: hidden;
+}
+
+.homepage .text-wrapper-6 {
+  position: absolute;
+  width: 292px;
+  top: 133px;
+  left: 11px;
+  font-family: "Mulish-BlackItalic", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.homepage .frame-3 {
+  position: absolute;
+  width: 314px;
+  height: 314px;
+  top: 631px;
+  left: 563px;
+  background-color: #da6916;
+  border-radius: 200px;
+  overflow: hidden;
+}
+
+.homepage .text-wrapper-7 {
+  position: absolute;
+  width: 292px;
+  top: 106px;
+  left: 11px;
+  font-family: "Mulish-ExtraBoldItalic", Helvetica;
+  font-weight: 800;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.homepage .frame-4 {
+  position: absolute;
+  width: 314px;
+  height: 314px;
+  top: 631px;
+  left: 120px;
+  background-color: #00967d;
+  border-radius: 200px;
+  overflow: hidden;
+}
+
+.homepage .text-wrapper-8 {
+  position: absolute;
+  width: 292px;
+  top: 134px;
+  left: 11px;
+  font-family: "Mulish-ExtraBoldItalic", Helvetica;
+  font-weight: 800;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 40px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.homepage .menu {
+  display: flex;
+  width: 510px;
+  height: 47px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 118px;
+  left: 810px;
+}
+
+.homepage .text-wrapper-9 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Space Mono-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
   font-size: 32px;
-  text-decoration: none;
-  text-transform: none;
-  color: var(--text-white);
-}
-
-.frame-11-6 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  border-radius: 200px;
-  width: 100%;
-  height: auto;
-}
-
-.frame-13-7 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  border-radius: 200px;
-}
-
-.frame-7-3 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(218, 105, 22, 1);
-  border-radius: 200px;
-}
-
-.frame-14-8 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(0, 150, 125, 1);
-  border-radius: 200px;
-}
-
-.frame-15-9 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(131, 212, 169, 1);
-  border-radius: 200px;
-}
-
-.frame-16-10 {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(245, 185, 43, 1);
-  border-radius: 200px;
-}
-
-.homepage-1 {
-@media (max-width: 1440px) {
-  .homepage-1 {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .homepage-1 {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  background-color: rgba(245, 231, 211, 1);
+  letter-spacing: 0;
+  line-height: normal;
 }
