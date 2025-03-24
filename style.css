@@ -1,28 +1,185 @@
-/* Reset default margins */
+/* Add font files for Mulish */
+@font-face {
+  font-family: 'Mulish';
+  src: url('fonts/mulish.woff2') format('woff2'),
+       url('fonts/mulish.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Add font files for Space Mono */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('fonts/space-mono.woff2') format('woff2'),
+       url('fonts/space-mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-mulish: 'Mulish', sans-serif;
+  --font-family-space-mono: 'Space Mono', sans-serif;
+  --text-rgb-0-150-125: rgba(0, 150, 125, 1);
+  --text-black: rgba(0, 0, 0, 1);
+  --text-white: rgba(255, 255, 255, 1);
+}
+
+.text-rgb-0-150-125 {
+  color: var(--text-rgb-0-150-125);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    
-    /* Set SVG as background */
-    background: url('images/fondo.svg') repeat;
-    background-size: cover;
-    background-color: #FAF3E0; /* Backup color */
-    color: #333; /* Dark text for contrast */
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Content container */
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(255, 255, 240, 0); /* Slight transparency for depth */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0);
-    border-radius: 5px;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.amarante-regular {
-    font-family: "Amarante", serif;
-    font-weight: 400;
-    font-style: normal;
+.text-2 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-mulish);
+  font-weight: normal;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-0-150-125);
+  font-family: var(--font-family-mulish);
+  font-weight: normal;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+  font-family: var(--font-family-space-mono);
+  font-weight: normal;
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+  font-family: var(--font-family-space-mono);
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.frame-12-4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(245, 185, 43, 1);
+  border-radius: 200px;
+}
+
+.text-5 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-space-mono);
+  font-weight: normal;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+  font-family: var(--font-family-space-mono);
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+  font-family: var(--font-family-space-mono);
+  font-weight: normal;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.frame-11-6 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border-radius: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.frame-13-7 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  border-radius: 200px;
+}
+
+.frame-7-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(218, 105, 22, 1);
+  border-radius: 200px;
+}
+
+.frame-14-8 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(0, 150, 125, 1);
+  border-radius: 200px;
+}
+
+.frame-15-9 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(131, 212, 169, 1);
+  border-radius: 200px;
+}
+
+.frame-16-10 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(245, 185, 43, 1);
+  border-radius: 200px;
+}
+
+.homepage-1 {
+@media (max-width: 1440px) {
+  .homepage-1 {
+    padding-left: 24px;
+    padding-right: 24px;
   }
+}
+
+@media (max-width: 768px) {
+  .homepage-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(245, 231, 211, 1);
+}
