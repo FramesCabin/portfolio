@@ -32,14 +32,14 @@
 .header_left_title {
   color: #da6916;
   font-family: "Mulish", monospace;
-  font-size: 48px;
+  font-size: 32px;
   font-weight: 900;
   font-style: italic;
 }
 .header_left_subtitle {
   color: #000000;
   font-family: "SpaceMono", monospace;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -47,7 +47,7 @@
     color: #000000;
     text-align: left;
     font-family: "SpaceMono", monospace;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
     position: relative;
   }
