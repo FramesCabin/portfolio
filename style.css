@@ -7,13 +7,14 @@
   padding: 100px 120px 100px 120px;
   display: flex;
   flex-direction: column;
-  gap: 120px;
+  gap: 200px;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   overflow: hidden;
 }
-.frame-16 {
+
+.header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -23,73 +24,56 @@
   height: 50px;
   position: relative;
 }
-.frames-cabin-portfolio {
+.header_left {
   text-align: left;
   position: relative;
   width: 547px;
 }
-.frames-cabin-portfolio-span {
+.header_left_title {
   color: #da6916;
-  font-family: "Mulish-BlackItalic", sans-serif;
-  font-size: 40px;
+  font-family: "Mulish", monospace;
+  font-size: 48px;
   font-weight: 900;
   font-style: italic;
 }
-.frames-cabin-portfolio-span2 {
+.header_left_subtitle {
   color: #000000;
-  font-family: "Mulish-BlackItalic", sans-serif;
-  font-size: 32px;
-  font-weight: 900;
-  font-style: italic;
-}
-.frames-cabin-portfolio-span3 {
-  color: #000000;
-  font-family: "SpaceMono-Regular", sans-serif;
+  font-family: "SpaceMono", monospace;
   font-size: 24px;
   font-weight: 400;
 }
-.frames-cabin-portfolio-span4 {
-  color: #000000;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-.frames-cabin-portfolio-span5 {
-  color: #000000;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-}
-.menu {
+
+.header_right {
+    color: #000000;
+    text-align: left;
+    font-family: "SpaceMono", monospace;
+    font-size: 32px;
+    font-weight: 400;
+    position: relative;
+  }
+
+.navigation_menu {
+  padding: 30px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 383px;
+  width: 480px;
   height: 47px;
   position: relative;
 }
-.portfolio {
-  color: #000000;
-  text-align: left;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: relative;
-}
-.about-me {
-  color: #000000;
-  text-align: left;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: relative;
-}
+
+.logo {
+    width: 500px;
+    position: relative;
+    object-fit: cover;
+  }
+
 .intro {
   background: #ffffff;
   border-radius: 200px;
-  padding: 10px 11px 10px 11px;
+  padding: 50px 50px 50px 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -98,19 +82,20 @@
   flex-shrink: 0;
   position: relative;
 }
+
 .frame-25 {
   display: flex;
   flex-direction: row;
-  gap: 120px;
+  gap: 300px;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
 }
-.frame-24 {
+.marco_foto {
   background: #da6916;
   border-radius: 200px;
-  padding: 9px 10px 9px 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -121,7 +106,7 @@
   height: 292px;
   position: relative;
 }
-.frame-11 {
+.foto {
   border-radius: 200px;
   flex-shrink: 0;
   width: 272px;
@@ -139,16 +124,16 @@
   flex-shrink: 0;
   position: relative;
 }
-.hi-welcome-to-my-portfolio-here-you-will-find-some-of-the-things-i-have-created-for-either-class-work-or-just-for-fun {
+.introtext {
   color: #da6916;
   text-align: left;
-  font-family: "SpaceMono-Regular", sans-serif;
+  font-family: "SpaceMono", monospace;
   font-size: 32px;
   font-weight: 400;
   position: relative;
   width: 670px;
 }
-.frame-17 {
+.buttons {
   flex-shrink: 0;
   width: 1200px;
   height: 314px;
@@ -167,7 +152,7 @@
 .illustrations {
   color: #ffffff;
   text-align: center;
-  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-family: "Mulish", monospace;
   font-size: 40px;
   font-weight: 800;
   font-style: italic;
@@ -191,7 +176,7 @@
 .computer-graphics {
   color: #ffffff;
   text-align: center;
-  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-family: "Mulish", monospace;
   font-size: 40px;
   font-weight: 800;
   font-style: italic;
@@ -217,7 +202,7 @@
 .programming {
   color: #ffffff;
   text-align: center;
-  font-family: "Mulish-BlackItalic", sans-serif;
+  font-family: "Mulish", monospace;
   font-size: 40px;
   font-weight: 900;
   font-style: italic;
@@ -240,7 +225,10 @@
   position: relative;
   aspect-ratio: 1200/3219;
 }
-.frame-21 {
+
+/* CUADRO VERDE: ILLUSTRACIONES */
+
+.cuadroVerde{
   background: #00967d;
   border-radius: 60px;
   display: flex;
@@ -256,7 +244,7 @@
   position: relative;
   aspect-ratio: 1200/784;
 }
-.portfolio-03-1 {
+.illustration_images{
   border-radius: 60px;
   flex-shrink: 0;
   width: 300px;
@@ -265,50 +253,9 @@
   object-fit: cover;
   aspect-ratio: 1;
 }
-.portfolio-02-2 {
-  border-radius: 150px;
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-.portfolio-01-3 {
-  border-radius: 60px;
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-.s-estetica-2 {
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-.portfolio-06-1 {
-  border-radius: 60px;
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-.s-odontologia-medicina-integrativa-1 {
-  flex-shrink: 0;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-.frame-18 {
+
+/* CUADRO NARANJA: COMPUTER GRAPHICS */
+.cuadroNaranja {
   background: #da6916;
   border-radius: 60px;
   padding: 13px 14px 13px 14px;
@@ -326,7 +273,7 @@
   overflow: hidden;
   aspect-ratio: 1200/1292;
 }
-.frame-22 {
+.spacing_naranja {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -337,16 +284,8 @@
   height: 563px;
   position: relative;
 }
-.render-1-1 {
-  border-radius: 60px;
-  flex-shrink: 0;
-  width: 999.11px;
-  height: 562px;
-  position: relative;
-  object-fit: cover;
-  aspect-ratio: 999.11/562;
-}
-.render-2-1 {
+
+.render {
   border-radius: 60px;
   flex-shrink: 0;
   width: 1000px;
@@ -355,7 +294,9 @@
   object-fit: cover;
   aspect-ratio: 1000/562;
 }
-.frame-19 {
+
+/* CUADRO AMARILLO: PROGRAMMING */
+.cuadroAmarillo {
   background: #f5b92b;
   border-radius: 80px;
   padding: 13px 14px 13px 14px;
@@ -371,53 +312,22 @@
   overflow: hidden;
   aspect-ratio: 1200/903;
 }
+
+/* FOOTERS */
+
 .footer {
   text-align: center;
-  font-family: "SpaceMono-Bold", sans-serif;
+  font-family: "SpaceMono", monospace;
+  padding: 400px 0px 0px 0px;
   font-size: 24px;
   font-weight: 700;
   position: relative;
   align-self: stretch;
 }
 .footer-span {
-  color: #00967d;
-  font-family: "SpaceMono-Bold", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-.footer-span2 {
   color: #000000;
-  font-family: "SpaceMono-Bold", sans-serif;
+  font-family: "Space Mono", monospace;
   font-size: 24px;
   font-weight: 700;
-}
-.footer-span3 {
-  color: #da6916;
-  font-family: "SpaceMono-Bold", sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.space-mono-regular {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
   font-style: normal;
-}
-
-.space-mono-bold {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.space-mono-regular-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.space-mono-bold-italic {
-  font-family: "Space Mono", monospace;
-  font-weight: 700;
-  font-style: italic;
 }
