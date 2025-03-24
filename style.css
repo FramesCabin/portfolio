@@ -4,20 +4,32 @@
 }
 .homepage {
   background: #f5e7d3;
-  height: 3500px;
+  padding: 100px 120px 100px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  align-items: center;
+  justify-content: flex-start;
   position: relative;
   overflow: hidden;
 }
+.frame-16 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 50px;
+  position: relative;
+}
 .frames-cabin-portfolio {
   text-align: left;
-  position: absolute;
-  left: 120px;
-  top: 118px;
+  position: relative;
   width: 547px;
-  height: 41px;
 }
 .frames-cabin-portfolio-span {
-  color: #00967d;
+  color: #da6916;
   font-family: "Mulish-BlackItalic", sans-serif;
   font-size: 40px;
   font-weight: 900;
@@ -48,154 +60,15 @@
   font-size: 24px;
   font-weight: 400;
 }
-.footer {
-  color: #000000;
-  text-align: left;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  bottom: 54px;
-  width: 291px;
-  height: 45px;
-}
-.intro {
-  background: #ffffff;
-  border-radius: 200px;
-  width: 1200px;
-  height: 312px;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  top: calc(50% - 1471px);
-  overflow: hidden;
-}
-.frame-12 {
-  background: #da6916;
-  border-radius: 200px;
-  width: 292px;
-  height: 292px;
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  overflow: hidden;
-}
-.hello-there-welcome-to-my-portfolio-here-you-will-find-some-of-the-things-i-have-created-for-either-class-work-or-just-for-fun {
-  color: #da6916;
-  text-align: left;
-  font-family: "SpaceMono-Regular", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: calc(50% - 232px);
-  top: calc(50% - 117px);
-  width: 738px;
-  height: 223px;
-}
-.frame-11 {
-  border-radius: 200px;
-  width: 272px;
-  height: 272px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  overflow: hidden;
-  object-fit: cover;
-}
-.frame-13 {
-  border-radius: 200px;
-  width: 272px;
-  height: 272px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  overflow: hidden;
-}
-.button-programming {
-  background: #f5b92b;
-  border-radius: 200px;
-  width: 314px;
-  height: 314px;
-  position: absolute;
-  left: calc(50% - -286px);
-  top: calc(50% - 1039px);
-  overflow: hidden;
-}
-.programming {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Mulish-BlackItalic", sans-serif;
-  font-size: 40px;
-  font-weight: 900;
-  font-style: italic;
-  position: absolute;
-  left: 50%;
-  translate: -50% -50%;
-  top: 50%;
-  width: 292px;
-  height: 45px;
-}
-.button-graphics {
-  background: #da6916;
-  border-radius: 200px;
-  width: 314px;
-  height: 314px;
-  position: absolute;
-  left: 50%;
-  translate: -50%;
-  top: calc(50% - 1039px);
-  overflow: hidden;
-}
-.computer-graphics {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Mulish-ExtraBoldItalic", sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 50%;
-  translate: -50% -50%;
-  top: 50%;
-  width: 292px;
-  height: 100px;
-}
-.button-illustrations {
-  background: #00967d;
-  border-radius: 200px;
-  width: 314px;
-  height: 314px;
-  position: absolute;
-  left: calc(50% - 600px);
-  top: calc(50% - 1039px);
-  overflow: hidden;
-}
-.illustrations {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Mulish-ExtraBoldItalic", sans-serif;
-  font-size: 40px;
-  font-weight: 800;
-  font-style: italic;
-  position: absolute;
-  left: 50%;
-  translate: -50% -50%;
-  top: 50%;
-  width: 292px;
-  height: 45px;
-}
 .menu {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
   width: 383px;
   height: 47px;
-  position: absolute;
-  right: 120px;
-  top: 118px;
+  position: relative;
 }
 .portfolio {
   color: #000000;
@@ -213,62 +86,314 @@
   font-weight: 400;
   position: relative;
 }
-.programming2 {
-  background: #f5b92b;
-  border-radius: 250px;
-  width: 1600px;
-  height: 500px;
-  position: absolute;
-  left: -280px;
-  top: 2430px;
-  overflow: hidden;
+.intro {
+  background: #ffffff;
+  border-radius: 200px;
+  padding: 10px 11px 10px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
 }
-.graphics {
+.frame-25 {
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.frame-24 {
   background: #da6916;
-  border-radius: 250px;
-  width: 1600px;
-  height: 500px;
-  position: absolute;
-  left: 120px;
-  top: 1810px;
-  overflow: hidden;
+  border-radius: 200px;
+  padding: 9px 10px 9px 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 292px;
+  height: 292px;
+  position: relative;
 }
-.illustrations2 {
+.frame-11 {
+  border-radius: 200px;
+  flex-shrink: 0;
+  width: 272px;
+  height: 272px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.frame-26 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+.hi-welcome-to-my-portfolio-here-you-will-find-some-of-the-things-i-have-created-for-either-class-work-or-just-for-fun {
+  color: #da6916;
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: relative;
+  width: 670px;
+}
+.frame-17 {
+  flex-shrink: 0;
+  width: 1200px;
+  height: 314px;
+  position: relative;
+}
+.button-illustrations {
   background: #00967d;
-  border-radius: 250px;
-  width: 1600px;
-  height: 500px;
+  border-radius: 200px;
+  width: 314px;
+  height: 314px;
   position: absolute;
-  left: -280px;
-  top: 1189px;
+  left: 0px;
+  top: 0px;
   overflow: hidden;
 }
-.portfolio-01-2 {
-  border-radius: 200px;
-  width: 400px;
-  height: 400px;
+.illustrations {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
   position: absolute;
-  left: 1159px;
-  top: 50px;
+  left: 41px;
+  top: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-graphics {
+  background: #da6916;
+  border-radius: 200px;
+  width: 314px;
+  height: 314px;
+  position: absolute;
+  left: 443px;
+  top: 0px;
+  overflow: hidden;
+}
+.computer-graphics {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  position: absolute;
+  left: 11px;
+  top: 107px;
+  width: 292px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-programming {
+  background: #f5b92b;
+  border-radius: 200px;
+  width: 314px;
+  height: 314px;
+  position: absolute;
+  left: 886px;
+  top: 0px;
+  overflow: hidden;
+}
+.programming {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-BlackItalic", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  font-style: italic;
+  position: absolute;
+  left: 21px;
+  top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-23 {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 3219px;
+  position: relative;
+  aspect-ratio: 1200/3219;
+}
+.frame-21 {
+  background: #00967d;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 784px;
+  position: relative;
+  aspect-ratio: 1200/784;
+}
+.portfolio-03-1 {
+  border-radius: 60px;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
   object-fit: cover;
   aspect-ratio: 1;
 }
-.portfolio-02-1 {
-  border-radius: 200px;
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 723px;
-  top: 50px;
+.portfolio-02-2 {
+  border-radius: 150px;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
   object-fit: cover;
   aspect-ratio: 1;
 }
-.s-estetica-1 {
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  left: 287px;
-  top: 50px;
+.portfolio-01-3 {
+  border-radius: 60px;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
   object-fit: cover;
   aspect-ratio: 1;
+}
+.s-estetica-2 {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.portfolio-06-1 {
+  border-radius: 60px;
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.s-odontologia-medicina-integrativa-1 {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.frame-18 {
+  background: #da6916;
+  border-radius: 60px;
+  padding: 13px 14px 13px 14px;
+  display: flex;
+  flex-direction: row;
+  gap: 52px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 1292px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1200/1292;
+}
+.frame-22 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1000px;
+  height: 563px;
+  position: relative;
+}
+.render-1-1 {
+  border-radius: 60px;
+  flex-shrink: 0;
+  width: 999.11px;
+  height: 562px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 999.11/562;
+}
+.render-2-1 {
+  border-radius: 60px;
+  flex-shrink: 0;
+  width: 1000px;
+  height: 562px;
+  position: relative;
+  object-fit: cover;
+  aspect-ratio: 1000/562;
+}
+.frame-19 {
+  background: #f5b92b;
+  border-radius: 80px;
+  padding: 13px 14px 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 903px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1200/903;
+}
+.footer {
+  text-align: center;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  align-self: stretch;
+}
+.footer-span {
+  color: #00967d;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer-span2 {
+  color: #000000;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer-span3 {
+  color: #da6916;
+  font-family: "SpaceMono-Bold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
 }
