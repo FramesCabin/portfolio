@@ -1,214 +1,274 @@
+.homepage,
+.homepage * {
+  box-sizing: border-box;
+}
 .homepage {
-  background-color: #f5e7d3;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
-
-.homepage .div {
-  background-color: #f5e7d3;
-  width: 1440px;
-  height: 1024px;
+  background: #f5e7d3;
+  height: 3500px;
   position: relative;
+  overflow: hidden;
 }
-
-.homepage .frames-cabin {
+.frames-cabin-portfolio {
+  text-align: left;
   position: absolute;
-  width: 547px;
-  top: 117px;
   left: 120px;
-  font-family: "Mulish", Helvetica;
-  font-weight: 400;
-  color: transparent;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  top: 118px;
+  width: 547px;
+  height: 41px;
 }
-
-.homepage .text-wrapper {
-  font-weight: 900;
-  font-style: italic;
+.frames-cabin-portfolio-span {
   color: #00967d;
-}
-
-.homepage .span {
+  font-family: "Mulish-BlackItalic", sans-serif;
+  font-size: 40px;
   font-weight: 900;
   font-style: italic;
+}
+.frames-cabin-portfolio-span2 {
   color: #000000;
+  font-family: "Mulish-BlackItalic", sans-serif;
   font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
 }
-
-.homepage .text-wrapper-2 {
-  font-family: "Space Mono", Helvetica;
+.frames-cabin-portfolio-span3 {
   color: #000000;
+  font-family: "SpaceMono-Regular", sans-serif;
   font-size: 24px;
+  font-weight: 400;
 }
-
-.homepage .text-wrapper-3 {
-  font-family: "Space Mono", Helvetica;
+.frames-cabin-portfolio-span4 {
   color: #000000;
+  font-family: "SpaceMono-Regular", sans-serif;
   font-size: 16px;
+  font-weight: 400;
 }
-
-.homepage .frame {
+.frames-cabin-portfolio-span5 {
+  color: #000000;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.footer {
+  color: #000000;
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   position: absolute;
+  left: 50%;
+  translate: -50%;
+  bottom: 54px;
+  width: 291px;
+  height: 45px;
+}
+.intro {
+  background: #ffffff;
+  border-radius: 200px;
   width: 1200px;
   height: 312px;
-  top: 239px;
-  left: 120px;
-  background-color: #da6916;
-  border-radius: 200px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: calc(50% - 1471px);
   overflow: hidden;
 }
-
-.homepage .overlap-group {
-  position: absolute;
+.frame-12 {
+  background: #da6916;
+  border-radius: 200px;
   width: 292px;
   height: 292px;
-  top: 10px;
+  position: absolute;
   left: 10px;
-  background-color: #f5b92b;
-  border-radius: 200px;
+  top: 10px;
+  overflow: hidden;
 }
-
-.homepage .frame-2 {
-  position: relative;
+.hello-there-welcome-to-my-portfolio-here-you-will-find-some-of-the-things-i-have-created-for-either-class-work-or-just-for-fun {
+  color: #da6916;
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: calc(50% - 232px);
+  top: calc(50% - 117px);
+  width: 738px;
+  height: 223px;
+}
+.frame-11 {
+  border-radius: 200px;
   width: 272px;
   height: 272px;
-  top: 10px;
-  left: 10px;
-  border-radius: 200px;
-  background-image: url(https://c.animaapp.com/5sIcJKys/img/frame-11@2x.png);
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-.homepage .hello-there-welcome {
   position: absolute;
-  width: 726px;
-  top: 48px;
-  left: 356px;
-  font-family: "Space Mono", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+  left: 20px;
+  top: 20px;
+  overflow: hidden;
+  object-fit: cover;
 }
-
-.homepage .text-wrapper-4 {
-  font-family: "Space Mono", Helvetica;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 32px;
-  letter-spacing: 0;
-}
-
-.homepage .text-wrapper-5 {
-  font-size: 16px;
-}
-
-.homepage .div-wrapper {
-  position: absolute;
-  width: 314px;
-  height: 314px;
-  top: 631px;
-  left: 1006px;
-  background-color: #f5b92b;
+.frame-13 {
   border-radius: 200px;
+  width: 272px;
+  height: 272px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
   overflow: hidden;
 }
-
-.homepage .text-wrapper-6 {
+.button-programming {
+  background: #f5b92b;
+  border-radius: 200px;
+  width: 314px;
+  height: 314px;
   position: absolute;
-  width: 292px;
-  top: 133px;
-  left: 11px;
-  font-family: "Mulish", Helvetica;
+  left: calc(50% - -286px);
+  top: calc(50% - 1039px);
+  overflow: hidden;
+}
+.programming {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-BlackItalic", sans-serif;
+  font-size: 40px;
   font-weight: 900;
   font-style: italic;
-  color: #ffffff;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.homepage .frame-3 {
   position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  width: 292px;
+  height: 45px;
+}
+.button-graphics {
+  background: #da6916;
+  border-radius: 200px;
   width: 314px;
   height: 314px;
-  top: 631px;
-  left: 563px;
-  background-color: #da6916;
-  border-radius: 200px;
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: calc(50% - 1039px);
   overflow: hidden;
 }
-
-.homepage .text-wrapper-7 {
-  position: absolute;
-  width: 292px;
-  top: 106px;
-  left: 11px;
-  font-family: "Mulish", Helvetica;
+.computer-graphics {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-size: 40px;
   font-weight: 800;
   font-style: italic;
-  color: #ffffff;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-}
-
-.homepage .frame-4 {
   position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  width: 292px;
+  height: 100px;
+}
+.button-illustrations {
+  background: #00967d;
+  border-radius: 200px;
   width: 314px;
   height: 314px;
-  top: 631px;
-  left: 120px;
-  background-color: #00967d;
-  border-radius: 200px;
+  position: absolute;
+  left: calc(50% - 600px);
+  top: calc(50% - 1039px);
   overflow: hidden;
 }
-
-.homepage .text-wrapper-8 {
-  position: absolute;
-  width: 292px;
-  top: 134px;
-  left: 11px;
-  font-family: "Mulish", Helvetica;
+.illustrations {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Mulish-ExtraBoldItalic", sans-serif;
+  font-size: 40px;
   font-weight: 800;
   font-style: italic;
-  color: #ffffff;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  top: 50%;
+  width: 292px;
+  height: 45px;
 }
-
-.homepage .menu {
+.menu {
   display: flex;
-  width: 510px;
-  height: 47px;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 383px;
+  height: 47px;
   position: absolute;
+  right: 120px;
   top: 118px;
-  left: 810px;
 }
-
-.homepage .text-wrapper-9 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Space Mono", Helvetica;
-  font-weight: 400;
+.portfolio {
   color: #000000;
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
   font-size: 32px;
-  letter-spacing: 0;
-  line-height: normal;
+  font-weight: 400;
+  position: relative;
+}
+.about-me {
+  color: #000000;
+  text-align: left;
+  font-family: "SpaceMono-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: relative;
+}
+.programming2 {
+  background: #f5b92b;
+  border-radius: 250px;
+  width: 1600px;
+  height: 500px;
+  position: absolute;
+  left: -280px;
+  top: 2430px;
+  overflow: hidden;
+}
+.graphics {
+  background: #da6916;
+  border-radius: 250px;
+  width: 1600px;
+  height: 500px;
+  position: absolute;
+  left: 120px;
+  top: 1810px;
+  overflow: hidden;
+}
+.illustrations2 {
+  background: #00967d;
+  border-radius: 250px;
+  width: 1600px;
+  height: 500px;
+  position: absolute;
+  left: -280px;
+  top: 1189px;
+  overflow: hidden;
+}
+.portfolio-01-2 {
+  border-radius: 200px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 1159px;
+  top: 50px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.portfolio-02-1 {
+  border-radius: 200px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 723px;
+  top: 50px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+.s-estetica-1 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 287px;
+  top: 50px;
+  object-fit: cover;
+  aspect-ratio: 1;
 }
