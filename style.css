@@ -53,13 +53,13 @@
   }
 
 .navigation_menu {
-  padding: 15px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  width: 480px;
+  width: 400px;
   height: 47px;
   position: relative;
 }
