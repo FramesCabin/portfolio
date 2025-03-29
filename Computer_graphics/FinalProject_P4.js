@@ -56,7 +56,8 @@ window.onload = async function init() {
     }
 
     gl.viewport(0, 0, canvas.width, canvas.height);
-    gl.clearColor(0.3921, 0.5843, 0.9294, 1.0);
+    // gl.clearColor(0.3921, 0.5843, 0.9294, 1.0);
+    gl.clearColor(0.8745, 0.7058, 0.5843, 1.0);
     gl.enable(gl.DEPTH_TEST);
     gl.disable(gl.CULL_FACE);
     gl.cullFace(gl.BACK);
@@ -166,7 +167,7 @@ window.onload = async function init() {
 
     // Projection matrices
     const projectionMatrix = perspective(65, canvas.width / canvas.height, 0.1 , 100.0); 
-    const lightProjectionMatrix = perspective(95, canvas.width / canvas.height, 0.5, 200); // for the shadow mapping
+    const lightProjectionMatrix = perspective(95, canvas.width / canvas.height, 0.8, 200); // for the shadow mapping
     const reflectProjectionMatrix = modifyProjectionMatrix(vec4(0, -1, 0, -1), projectionMatrix) // for the reflected teapot
 
     // Camera parameters

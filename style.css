@@ -22,6 +22,17 @@ h2 {
   font-weight: 800;
   font-size: 28px;
 }
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
 /* -------------------------------------------------------- */
 /* HEADERS */
 .header {
@@ -278,6 +289,7 @@ h2 {
       flex-direction: column;
       align-items: center;
       max-width: 800px;
+      gap: 20px;
       text-align: center;
     }
 
@@ -287,7 +299,7 @@ h2 {
       height: auto;
       border-radius: 60px;
       box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-      margin-bottom: 20px; /* Space between image and text */
+      margin-bottom: 0px; /* Space between image and text */
     }
 
     .project-description {
@@ -295,6 +307,7 @@ h2 {
       font-size: 14px;
       color: #333;
       line-height: 1.6;
+      margin-bottom: 20px;
       max-width: 700px;
       text-align: center;
     }
@@ -302,20 +315,30 @@ h2 {
     /* ........................................................ */    
     /* COMPUTER GRAPHICS */
   
-    .cg-image img {
-      /* imagenes de graphicos */
-      max-width: 100%;
-      height: auto;
-      border-radius: 12px;
-      margin: 0px 0;
+    .cg-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Allows wrapping on small screens */
+      gap: 20px;
+      border-radius: 30px;
+      margin: 0 0 40px;
     }
     
+    .cg-image img {
+      width: 100%;
+      max-width: 800px; /* Adjust this for preferred size */
+      height: auto;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
     .embedded-teapot iframe {
       width: 100%;
-      max-width: 800px;
-      height: 800px; /* Try this or higher if needed */
-      border-radius: 60px;
-      margin: auto;
+      /* max-width: 512px; */
+      height: 360px;
+      border-radius: 30px;
+      margin-top: -16px;
     }
     
     .cg-buttons {
@@ -367,6 +390,16 @@ h2 {
   .homepage {
     padding: 40px 20px;
     gap: 60px;
+  }
+
+  .space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 16px;
   }
 
   .portfolio-section h2 {
@@ -487,17 +520,19 @@ h2 {
     text-align: center;
     max-width: 700px;
     padding: 0 20px;
+    gap: 10px;
   }
 
   .thumbnail-showcase {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 30px;
   }
 
   .project-description {
-    padding: 25px ;
+    /* padding: 25px ; */
     font-size: 12px;
-    text-align: center ; /* Optional: neater on narrow screens */
+    text-align: center ; 
+    margin-top: 16px;/* Optional: neater on narrow screens */
   }
 
   .art-project img {
@@ -506,9 +541,29 @@ h2 {
     display: block;
     margin: 0 auto;
   }
+
+  .cg-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    gap: 20px;
+    border-radius: 30px;
+    margin: 0 0 40px;
+  }
   
+  .cg-image img {
+    width: 80%;
+    max-width: 600px; /* Adjust this for preferred size */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
   .embedded-teapot iframe {
-    height: 400px;
+    height: 359px;
+    margin-bottom: -16px;
+    margin-top: -6px;
   }
 
   .cg-project-button {
