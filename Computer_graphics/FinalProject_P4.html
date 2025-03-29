@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Vertex and Fragment Shaders for Teapot -->
+    <script id="vertex-shader-depth" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+
+        uniform mat4 lightProLoc; 
+        uniform mat4 lightViewLoc; 
+        uniform mat4 modLoc; 
+
+        void main() {
+
+            gl_Position = lightProLoc * lightViewLoc * modLoc * vPosition;
+
+        }
+    </script>
+    <script id="fragment-shader-depth" type="x-shader/x-fragment">
+        precision mediump float; 
+
+        void main(){     
+            const vec4 bitShift = vec4(1.0, 256.0, 256.0*256.0, 256.0*256.0*256.0);     
+            const vec4 bitMask = vec4(1.0/256.0, 1.0/256.0, 1.0/256.0, 0.0);     
+            vec4 rgbaDepth = fract(gl_FragCoord.z * bitShift);     
+            rgbaDepth -= rgbaDepth.gbaa * bitMask; 
+
+            gl_FragColor = rgbaDepth; 
+        } 
+
+    </script>
+
+    <script id="vertex-shader-teapot" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+        attribute vec3 vNormal;
+        attribute vec4 vColor;
+
+        uniform mat4 viewLoc;
+        uniform mat4 proLoc;
+        uniform mat4 modLoc;
+        uniform mat4 lightProLoc;
+        uniform mat4 lightViewLoc;
+        uniform vec3 uPointLightPosition;
+        
+
+        varying vec3 fragNormal;
+        varying vec3 fragPosition;
+        varying vec4 vColorf;
+        varying vec3 pointLightPosition; 
+        varying vec4 lightSpacePosition;
+        varying vec3 transformedNormal;
+
+        void main() {
+            
+            gl_Position = proLoc * viewLoc * modLoc * vPosition;
+            lightSpacePosition = lightProLoc * lightViewLoc * modLoc * vPosition;
+
+            fragNormal = mat3(modLoc) * vNormal; 
+
+            fragPosition = vec3(modLoc * vPosition); // Transform vertex position to world space
+
+            vColorf = vColor;
+            pointLightPosition = uPointLightPosition;
+        }
+    </script>
+    <script id="fragment-shader-teapot" type="x-shader/x-fragment">
+
+        precision mediump float;
+
+        uniform sampler2D shadowMap;      // Depth texture
+        uniform vec3 lightDirection;      // Directional light
+        uniform vec3 ambientLight;        // Ambient light intensity
+        uniform vec3 lightColor;          // Light color
+        
+        
+        varying vec3 fragNormal;          // Normal in world space
+        varying vec3 fragPosition;        // Position in world space
+        varying vec4 vColorf;
+        varying vec3 pointLightPosition;
+        varying vec4 lightSpacePosition;
+
+
+        void main() {
+        
+            vec3 N = normalize(fragNormal); // Normalize the normal vector
+
+
+            // Shadow calculation
+            vec3 projCoords = lightSpacePosition.xyz / lightSpacePosition.w; // Perspective divide
+            projCoords = projCoords * 2.0 + 0.5; // Map to [0, 1]
+            float shadowDepth = texture2D(shadowMap, projCoords.xy).r;
+            float shadowFactor = projCoords.z > shadowDepth + 0.005 ? 0.7 : 1.0;
+        
+            vec3 ambient = ambientLight * lightColor; // Compute ambient lighting
+        
+            // Compute diffuse lighting
+            vec3 L = normalize(lightDirection);
+            float diffuseFactorDir = max(dot(N, L), 0.0);
+            vec3 diffuseDir = diffuseFactorDir * lightColor;
+
+            // Point light
+            vec3 toPointLight = normalize(pointLightPosition - fragPosition);
+            float diffuseFactorPoint = max(dot(N, toPointLight), 0.0);
+            vec3 diffusePoint = diffuseFactorPoint * lightColor;
+        
+            // Combine ambient and diffuse lighting
+            //vec3 lighting =  ambient + diffuseDir + diffusePoint;
+            //vec3 lighting =  ambient + diffusePoint + shadowFactor;
+            vec3 lighting =  ambient + diffusePoint;
+        
+            // Set the final fragment color
+            gl_FragColor = vColorf * vec4(lighting, 1.0);
+
+        }
+    </script>
+
+    <!-- Vertex and Fragment Shaders for Floor -->
+    <script id="vertex-shader-floor" type="x-shader/x-vertex">
+        attribute vec4 vPosition;
+        attribute vec2 vTexCoord;
+
+        uniform mat4 viewLoc;
+        uniform mat4 proLoc;
+        uniform mat4 modLoc;
+
+        varying vec2 fragTexCoord;
+        varying vec3 fragPosition;
+
+        void main() {
+            gl_Position = proLoc * viewLoc * modLoc * vPosition;
+            fragTexCoord = vTexCoord;
+            fragPosition = vec3(modLoc * vPosition);
+        }
+    </script>
+    <script id="fragment-shader-floor" type="x-shader/x-fragment">
+        precision mediump float;
+
+        varying vec2 fragTexCoord; // Texture coordinates
+        uniform sampler2D texMapFloor; // Floor texture
+        uniform sampler2D shadowMap;   // Shadow map
+        uniform mat4 lightProLoc;      // Light projection matrix
+        uniform mat4 lightViewLoc;     // Light view matrix
+
+        varying vec3 fragPosition;     // Fragment position in world space
+
+        void main() {
+            // Calculate shadow map coordinates
+            vec4 lightSpacePosition = lightProLoc * lightViewLoc * vec4(fragPosition, 1.0);
+            vec3 projCoords = lightSpacePosition.xyz / lightSpacePosition.w; // Perspective divide
+            projCoords = projCoords * 0.5 + 0.5; // Map to [0, 1]
+        
+            // Sample the shadow map
+            float shadowDepth = texture2D(shadowMap, projCoords.xy).r;
+        
+            // Calculate shadow intensity
+            float shadow = projCoords.z > shadowDepth + 0.005 ? 0.7 : 1.0;
+        
+            // Sample the floor texture
+            vec4 floorColor = texture2D(texMapFloor, fragTexCoord);
+        
+            // Combine floor texture with shadow
+            vec3 finalColor = floorColor.rgb * shadow; // Modulate floor texture by shadow intensity
+            gl_FragColor = vec4(finalColor, floorColor.a*0.9);
+        }
+    </script>
+
+    <!-- WebGL Utilities -->
+    <script type="text/javascript" src="angelCommon/webgl-utils.js"></script>
+    <script type="text/javascript" src="angelCommon/initShaders.js"></script>
+    <script type="text/javascript" src="angelCommon/MV.js"></script>
+    <script type="text/javascript" src="OBJParser.js"></script>
+    <script type="text/javascript" src="FinalProject_P4.js"></script>
+</head>
+<body>
+    <canvas id="c" width="512" height="512">Your browser doesn't support WebGL</canvas>
+    <br>
+
+    <button id="light_circulation_button"> Animate light on/off </button>
+
+    <button id="toggle-motion-button"> Teapot jump on/off </button>
+
+</body>
+</html>
+
+
+
