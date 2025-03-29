@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Preload is optional but helps -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+        body {
+        font-family: "Space Mono", monospace;
+        }
+
+        .space-mono-regular {
+            font-family: "Space Mono", monospace;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .cg-project-button {
+         font-family: "Space Mono", monospace;
+        /* your other styles */
+        }
+        .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+        }
+
+        .teapot-button {
+        font-family: "Space Mono", monospace;
+        font-weight: 700;
+        font-size: 13px;
+        background-color: #da6916;
+        color: white;
+        padding: 3px 10px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        }
+
+        .teapot-button:hover {
+        background-color: #a34e11;
+        }
+      </style>
+
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 vPosition;        // Vertex position
+        uniform mat4 proLoc;            // Projection matrix
+        uniform mat4 viewLoc;           // View matrix
+
+        varying vec3 fragNormal;        // Normal passed to fragment shader
+
+        void main() {
+            fragNormal = normalize(vPosition.xyz); // Normalized position as normal
+            gl_Position = proLoc * viewLoc * vPosition; // Transform vertex position
+        }
+    </script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+    
+        varying vec3 fragNormal;         // Interpolated normal from vertex shader
+        uniform sampler2D texture;      // Texture sampler
+        uniform vec3 lightDirection;    // Directional light direction
+        uniform vec3 ambientLight;      // Ambient light intensity
+    
+        void main() {
+            // Normalize the normal vector
+            vec3 N = normalize(fragNormal);
+    
+            // Compute spherical coordinates for texture mapping
+            float u = 1.0 - (atan(N.z, N.x) / (2.0 * 3.14159265359) + 0.5);
+            float v = 0.5 - asin(N.y) / 3.14159265359;
+    
+            // Sample the texture color
+            vec3 textureColor = texture2D(texture, vec2(u, v)).rgb;
+    
+            // Ambient lighting
+            vec3 ambient = ambientLight * textureColor;
+    
+            // Diffuse lighting
+            vec3 L = normalize(lightDirection);  // Normalize light direction
+            float diffuseFactor = max(dot(N, L), 0.0);
+            vec3 diffuse = diffuseFactor * textureColor;
+    
+            // Combine ambient and diffuse lighting
+            vec3 lighting = ambient + diffuse;
+    
+            gl_FragColor = vec4(lighting, 1.0);  // Final color
+        }
+    </script>
+
+    <!-- WebGL utilities and shader init functions -->
+    <script type="text/javascript" src="angelCommon/webgl-utils.js"></script>
+    <script type="text/javascript" src="angelCommon/initShaders.js"></script>
+    <script type="text/javascript" src="angelCommon/MV.js"></script>
+    <script type="text/javascript" src="W06P3.js"></script>
+    <img id="earthTexture" src="earth.jpg" style="display:none;" alt="Earth Texture">
+</head>
+<body>
+    <canvas id="c" style="width: 100%; height: auto; border-radius: 30px;" width="512" height="512">Your browser doesn't support WebGL</canvas>
+    <br>
+
+    <div class="space-mono-regular">
+        <div class="button-container">
+            <button class="teapot-button" id="Increment_button">Increment</button>
+            <button class="teapot-button" id="Decrement_button">Decrement</button>
+            <button class="teapot-button" id="Toggle_Orbit_button">Orbit on/off</button>
+        </div>
+    </div>
+
+    <!-- BUTTON TO INCREMENT SUBDIVISION -->
+    <!-- <button id="Increment_button">Increment</button> -->
+
+    <!-- BUTTON TO DECREMENT SUBDIVISION -->
+    <!-- <button id="Decrement_button">Decrement</button> -->
+
+    <!-- BUTTON TO TOGGLE ORBIT -->
+    <!-- <button id="Toggle_Orbit_button">Orbit on/off</button> -->
+</body>
+</html>
