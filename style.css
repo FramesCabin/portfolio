@@ -262,30 +262,22 @@
   .header_left_title {
     color: #da6916;
     font-family: "Mulish", monospace;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 900;
     font-style: italic;
   }
   .header_left_subtitle {
     color: #000000;
     font-family: "SpaceMono", monospace;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 400;
   }
   .header_right {
       color: #000000;
       text-align: left;
       font-family: "SpaceMono", monospace;
-      font-size: 12px;
+      font-size: 16px;
       font-weight: 400;
-      position: relative;
-    }
-    .header_right_selected {
-      color: #da6916;
-      text-align: left;
-      font-family: "SpaceMono", monospace;
-      font-size: 12px;
-      font-weight: 800;
       position: relative;
     }
 
@@ -311,7 +303,7 @@
   
   .introtext {
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     padding: 40px 20px 100px;
     text-align: center;
   }
@@ -359,5 +351,12 @@
   .footer {
     padding: 60px 0 0 0;
     text-align: center;
+  }
+  .footer-span {
+    color: #000000;
+    font-family: "Space Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    font-style: normal;
   }
 }
