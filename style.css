@@ -56,7 +56,7 @@ h2 {
     color: #000000;
     text-align: left;
     font-family: "SpaceMono", monospace;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
     position: relative;
   }
@@ -168,7 +168,7 @@ h2 {
 /* END OF INTRODUCTION */
 /* -------------------------------------------------------- */
 
-
+/* HOMEPAGE */
 .buttons {
   flex-shrink: 0;
   width: 600px;
@@ -199,6 +199,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .button-graphics {
   background: #da6916;
   border-radius: 200px;
@@ -250,108 +251,119 @@ h2 {
   justify-content: center;
 }
 
-.portfolio-section {
-  margin-bottom: 80px;
-  width: 100%;
-}
+/* ----------------------------------------------------------------------------------------- */
+/* PORTFOLIO PAGE */
 
-.portfolio-section h2 {
-  font-family: "SpaceMono", monospace;
-  font-size: 32px;
-  color: #da6916;
-  margin-bottom: 20px;
-  text-align: left;
-}
+    .portfolio-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+      width: 100%;
+    }
 
-.art-project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px;
-  margin: 60px auto;
-  text-align: center;
-}
+    .portfolio-section h2 {
+      font-family: "SpaceMono", monospace;
+      font-size: 32px;
+      color: #da6916;
+      margin-bottom: 40px;
+      text-align: left;
+    }
 
-.thumbnail-showcase {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  margin-bottom: 20px; /* Space between image and text */
-}
+    /* ........................................................ */
+    /* ILLUSTRATIONS */
 
-.project-description {
-  font-family: "Space Mono", monospace;
-  font-size: 14px;
-  color: #333;
-  line-height: 1.6;
-  max-width: 700px;
-  text-align: left;
-}
+    .art-project {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 800px;
+      text-align: center;
+    }
 
-.art-gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    .thumbnail-showcase {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 60px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      margin-bottom: 20px; /* Space between image and text */
+    }
 
-.art-gallery-grid img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
+    .project-description {
+      font-family: "Space Mono", monospace;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+      max-width: 700px;
+      text-align: center;
+    }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+    /* ........................................................ */    
+    /* COMPUTER GRAPHICS */
+  
+    .cg-image img {
+      /* imagenes de graphicos */
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 0px 0;
+    }
+    
+    .embedded-teapot iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 800px; /* Try this or higher if needed */
+      border-radius: 60px;
+      margin: auto;
+    }
+    
+    .cg-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    
+    .cg-project-button {
+      background-color: #da6916;
+      color: white;
+      padding: 12px 20px;
+      font-family: "SpaceMono", monospace;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    .cg-project-button:hover {
+      background-color: #a34e11;
+    }
 
-.grid img {
-  width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-}
+    /* ........................................................ */    
+    /* PROGRAMMING/OTHER */
 
-.cg-content {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
-}
+    .pr-project-button {
+      background-color: #f5b92b;
+      color: white;
+      padding: 12px 20px;
+      font-family: "SpaceMono", monospace;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    
+    .pr-project-button:hover {
+      background-color: #d79c12;
+    }
 
-.cg-image img {
-  width: 300px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.cg-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.project-button {
-  padding: 20px 30px;
-  border-radius: 30px;
-  background-color: #3c947d;
-  color: #ffffff;
-  font-family: "SpaceMono", monospace;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  width: 200px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.project-button:hover {
-  background-color: #297265;
-}
-@media (max-width: 768px) {
+/* ------------------------------------------------------------------------------ */
+/* PHONE VERSION */
+@media (max-width: 900px) {
   .homepage {
     padding: 40px 20px;
     gap: 60px;
@@ -361,60 +373,62 @@ h2 {
     text-align: center;
   }
 
-  .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 0px 10px;
-    height: auto;
-  }
+  /* HEADERS */
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px 45px;
+        height: auto;
+      }
 
-  .header_left_title {
-    color: #da6916;
-    font-family: "Mulish", monospace;
-    font-size: 28px;
-    font-weight: 900;
-    font-style: italic;
-  }
-  .header_left_subtitle {
-    color: #000000;
-    font-family: "SpaceMono", monospace;
-    font-size: 12px;
-    font-weight: 400;
-  }
-  .header_right {
-      color: #000000;
-      text-align: left;
-      font-family: "SpaceMono", monospace;
-      font-size: 16px;
-      font-weight: 400;
-      position: relative;
-    }
+      .header_left_title {
+        color: #da6916;
+        font-family: "Mulish", monospace;
+        font-size: 28px;
+        font-weight: 900;
+        font-style: italic;
+      }
+      .header_left_subtitle {
+        color: #000000;
+        font-family: "SpaceMono", monospace;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      .header_right {
+          color: #000000;
+          text-align: left;
+          font-family: "SpaceMono", monospace;
+          font-size: 16px;
+          font-weight: 400;
+          position: relative;
+        }
 
-  .navigation_menu {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 30px 10px 0px;
-    height: auto;
-  }
+      .navigation_menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 30px 10px 0px;
+        height: auto;
+      }
 
+  
   .logo {
     width: 200px;
   }
 
-  .frame-25 {
+  /* .frame-25 {
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 0px 10px;
-  }
+  } */
   
   .introtext {
     width: 100%;
     font-size: 16px;
-    padding: 40px 20px 100px;
+    padding: 40px;
     text-align: center;
   }
 
@@ -493,9 +507,13 @@ h2 {
     margin: 0 auto;
   }
   
-  .project-button {
-    width: 90%;
-    margin: 0 auto;
+  .embedded-teapot iframe {
+    height: 400px;
+  }
+
+  .cg-project-button {
+    font-size: 14px;
+    padding: 10px 16px;
   }
 
   .footer {
