@@ -264,8 +264,30 @@ h2 {
 }
 
 .art-project {
-  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.thumbnail-showcase {
   width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Space between image and text */
+}
+
+.project-description {
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+  text-align: left;
 }
 
 .art-gallery-grid {
@@ -279,14 +301,6 @@ h2 {
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.project-description {
-  margin-top: 15px;
-  font-family: "Space Mono", monospace;
-  font-size: 14px;
-  color: #333;
-  max-width: 700px;
 }
 
 .grid {
@@ -343,10 +357,8 @@ h2 {
     gap: 60px;
   }
 
-  h2 {
-    font-family: "Mulish", monospace; 
-    font-weight: 800;
-    font-size: 16px;
+  .portfolio-section h2 {
+    text-align: center;
   }
 
   .header {
@@ -456,8 +468,22 @@ h2 {
   }
 
   .art-project {
-    padding: 20px 10px;
+    margin: 10px auto;
+    padding: 10px 10px;
     text-align: center;
+    max-width: 700px;
+    padding: 0 20px;
+  }
+
+  .thumbnail-showcase {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .project-description {
+    padding: 25px ;
+    font-size: 12px;
+    text-align: center ; /* Optional: neater on narrow screens */
   }
 
   .art-project img {
@@ -466,17 +492,7 @@ h2 {
     display: block;
     margin: 0 auto;
   }
-
-  .project-description {
-    font-size: 14px;
-    padding: 0 10px;
-  }
-
-  .portfolio-section h2 {
-    font-size: 20px;
-    text-align: center;
-  }
-
+  
   .project-button {
     width: 90%;
     margin: 0 auto;
