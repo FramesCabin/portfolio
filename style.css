@@ -17,6 +17,11 @@
   overflow: hidden;
 }
 
+h2 {
+  font-family: "SpaceMono", monospace; /* or "Space Mono", monospace, etc. */
+  font-weight: 800;
+  font-size: 28px;
+}
 /* -------------------------------------------------------- */
 /* HEADERS */
 .header {
@@ -245,10 +250,103 @@
   justify-content: center;
 }
 
+.portfolio-section {
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.portfolio-section h2 {
+  font-family: "SpaceMono", monospace;
+  font-size: 32px;
+  color: #da6916;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.art-project {
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.art-gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.art-gallery-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.project-description {
+  margin-top: 15px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: #333;
+  max-width: 700px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grid img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cg-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.cg-image img {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cg-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-button {
+  padding: 20px 30px;
+  border-radius: 30px;
+  background-color: #3c947d;
+  color: #ffffff;
+  font-family: "SpaceMono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #297265;
+}
 @media (max-width: 768px) {
   .homepage {
     padding: 40px 20px;
     gap: 60px;
+  }
+
+  h2 {
+    font-family: "Mulish", monospace; 
+    font-weight: 800;
+    font-size: 16px;
   }
 
   .header {
@@ -347,6 +445,42 @@
     width: auto;
   }
 
+  .art-gallery-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .art-gallery-grid img {
+    width: 90%;
+    height: auto;
+  }
+
+  .art-project {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .art-project img {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .project-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .portfolio-section h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .project-button {
+    width: 90%;
+    margin: 0 auto;
+  }
 
   .footer {
     padding: 60px 0 0 0;
