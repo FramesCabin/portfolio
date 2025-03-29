@@ -259,6 +259,36 @@
     height: auto;
   }
 
+  .header_left_title {
+    color: #da6916;
+    font-family: "Mulish", monospace;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+  }
+  .header_left_subtitle {
+    color: #000000;
+    font-family: "SpaceMono", monospace;
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .header_right {
+      color: #000000;
+      text-align: left;
+      font-family: "SpaceMono", monospace;
+      font-size: 12px;
+      font-weight: 400;
+      position: relative;
+    }
+    .header_right_selected {
+      color: #da6916;
+      text-align: left;
+      font-family: "SpaceMono", monospace;
+      font-size: 12px;
+      font-weight: 800;
+      position: relative;
+    }
+
   .navigation_menu {
     width: 100%;
     flex-direction: column;
