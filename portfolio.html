@@ -47,7 +47,12 @@
     <div class="header">
       <div class="header_left">
         <span>
-          <span class="header_left_title"> <a style= "color: #da6916; text-decoration: none;" href="index.html"> Frames Cabin </a></span>
+          <span class="header_left_title">
+            <a class="header-logo-link" href="index.html">Frames Cabin</a>
+          </span>
+          <!-- <a class="header-logo-link" href="index.html">
+            <img src="Images/logo.png" alt="Frames Cabin Logo" class="header-logo-img">
+          </a> -->
           <span class="header_left_subtitle"> / Portfolio </span>
 
         </span>
@@ -63,15 +68,15 @@
 
 
     <!-- ILLUSTRATIONS -->
-    <div class="portfolio-section">
-      <h2 style="color: #3c947d" >Illustrations</h2>
+    <div class="portfolio-section" id="illustrations">
+      <h2 style="color: #3c947d">Illustrations</h2>
 
         <div class="art-project">
           <p class="space-mono-regular">
             THE WITCH OF AIAIA (Concept Art)
           </p>
           <a href="Images/AIAIA.pdf" target="_blank">
-            <img class="thumbnail-showcase" src="Images/AIAIA.png" alt="High-Res Art" />
+            <img class="thumbnail-showcase" src="Images/AIAIA_small.png" alt="High-Res Art" />
           </a>
           <p class="project-description">
             This is some concept art I created for my videogame proposal to the DADIU program. The artwork shows the prison island of the goddess Circe. Here, she explores and unravels its mysteries, crafts potions and casts enchantments to protect her nymphs. To unbound herself from her prison, she shall face 3 divine trials from Helios, Oceanos and Hecate which help her unlock the power of the island and her own. At the end, the player chooses how Circe gets her freedom: leave Aiaia for good, claim it as her own untouchable domain, or destroy it entirely along herself, defying the gods.
@@ -81,7 +86,7 @@
     </div>
     
     <!-- COMPUTER GRAPHICS -->
-    <div class="portfolio-section">
+    <div class="portfolio-section" id="computer-graphics">
       <h2 class="section-title">Computer Graphics</h2>
     
       <div class="art-project">
@@ -98,7 +103,7 @@
       <br />
       <div class="art-project">
         <div class="space-mono-regular">
-          Standford Teapot
+          Newell Teapot
         </div>
         <div class="embedded-teapot">
           <iframe 
@@ -112,7 +117,7 @@
       </div>
 
       <br />
-      <div class="art-project">
+      <div class="art-project" id="programming">
         <div class="space-mono-regular">
           Planet Earth
         </div>
@@ -122,7 +127,7 @@
           </iframe>
         </div>
         <p class="project-description">
-          Also an exercise from the Computer Graphics course. The goal was to obtain a sphere by incrementing or decrementing the number of triangles than define it.
+          Also an exercise from the Computer Graphics course. The goal was to obtain a sphere by incrementing or decrementing the number of triangles than define it. The Earth texture is just to make it prettier.
         </p>
       </div>
     
@@ -137,6 +142,14 @@
       <h2 style="color:  #f5b92b" >Other Projects</h2>
         <a class="pr-project-button" href="project_links/some_cool_thing.html">Cool Thing</a>
         <!-- Optional third section -->
+
+        <details class="dropdown-info">
+          <summary>Bonus project</summary>
+          <p>
+            I created this website from scratch using HTML, CSS, and some WebGL and shader integration. It's not just a site—it's a design and development showcase!
+          </p>
+        </details>
+
     </div>
 
 
