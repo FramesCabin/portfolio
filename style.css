@@ -33,6 +33,16 @@ h2 {
   font-size: 22px;
 }
 
+.space-mono-regular_subtitle {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-top: -24px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
 /* -------------------------------------------------------- */
 /* HEADERS */
 .header {
@@ -360,8 +370,8 @@ h2 {
     .carousel-wrapper {
       position: relative;
       width: 90%;
-      max-width: 450px;
-      margin: auto;
+      max-width: 600px;
+      margin: 0;
       padding: 0 50px; /* give room for buttons */
     }
     
@@ -373,7 +383,7 @@ h2 {
     
     .carousel-track {
       display: flex;
-      transition: transform 0.4s ease-in-out;
+      transition: transform 0.8s ease-in-out;
     }
     
     .carousel-track img {
@@ -382,30 +392,48 @@ h2 {
       border-radius: 0px;
     }
     
+    /* Shared button styling */
     .carousel-button {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: #00967d;
+      background: none;
       border: none;
-      color: white;
-      font-size: 10px;
-      padding: 12px;
-      border-radius: 50%;
+      padding: 0;
+      width: 40px;
+      height: 40px;
       cursor: pointer;
       z-index: 2;
     }
-    
+
+    /* Positioning the buttons outside the container */
     .carousel-button.left {
-      left: 0;
+      left: -35px;
     }
-    
+
     .carousel-button.right {
-      right: 0;
+      right: -35px;
     }
-    
-    .carousel-button:hover {
-      background-color: #137363;
+
+    /* Icon styling */
+    .carousel-icon {
+      width: 100%;
+      height: auto;
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Rotate icons for left and right */
+    .left-icon {
+      transform: rotate(-90deg);
+    }
+
+    .right-icon {
+      transform: rotate(90deg);
+    }
+
+    /* Optional hover effect */
+    .carousel-button:hover .carousel-icon {
+      filter: brightness(1.2);
     }
     /* ........................................................ */    
     /* COMPUTER GRAPHICS */
@@ -535,6 +563,15 @@ h2 {
       margin-top: 10px;
     }
 
+    .dropdown-info summary {
+      list-style: none; /* removes the marker from most browsers */
+    }
+    
+    /* For Safari specifically */
+    .dropdown-info summary::-webkit-details-marker {
+      display: none;
+    }
+
 /* ------------------------------------------------------------------------------ */
 /* PHONE VERSION */
 @media (max-width: 900px) {
@@ -551,6 +588,16 @@ h2 {
     margin-top: 2px;
     margin-bottom: 2px;
     font-size: 16px;
+  }
+
+  .space-mono-regular_subtitle {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 2px;
+    font-size: 13px;
   }
 
   .portfolio-section h2 {
@@ -719,6 +766,48 @@ h2 {
     margin: 0 auto;
   }
 
+  .carousel-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin:20px 0 0 0;
+    padding: 0 50px; /* give room for buttons */
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  }
+  
+  .carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 0px;
+  }
+
+  /* Shared button styling */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  /* Positioning the buttons outside the container */
+  .carousel-button.left {
+    left: -15px;
+  }
+
+  .carousel-button.right {
+    right: -15px;
+  }
+
   .cg-image {
     display: flex;
     justify-content: center;
@@ -738,7 +827,7 @@ h2 {
   }
 
   .embedded-teapot iframe {
-    height: 359px;
+    height: 362px;
     margin-bottom: -16px;
     margin-top: -6px;
   }
