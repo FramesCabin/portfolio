@@ -585,20 +585,24 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    margin-bottom: -30px;
     width: 100%;
     max-width: 1100px;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
   }
   
   .aboutme-block {
     flex: 1;
-    max-width: 480px;
+    max-width: 500px;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-family: "Space Mono", monospace;
     text-align: center;
+    display: flex;              
+    flex-direction: column;   
+    justify-content: space-between; 
   }
   
   .aboutme-intro {
@@ -619,7 +623,7 @@ h2 {
   }
   
   .block-paragraph {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
   }
   
@@ -632,7 +636,7 @@ h2 {
   
   .pill-container-prog {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
     justify-items: center;
     padding: 0 30px; 
     gap: 12px;
@@ -640,7 +644,7 @@ h2 {
   
   .pill-container-soft {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     padding: 0 30px; 
     justify-items: center;
     gap: 12px;
@@ -657,14 +661,160 @@ h2 {
   .pill {
     background-color: #f5b92b;
     border-radius: 100px;
-    padding: 8px 16px;
-    font-size: 18px;
+    padding: 6px 16px;
+    font-size: 13px;
     font-weight: 700;
     display: inline-block;
     white-space: nowrap;
     color: #000000;
   }
 
+      /* trio boxes */
+
+      .aboutme-trio-boxes {
+        display: flex;
+        gap: 30px;
+        margin-top: -20px;
+        width: 100%;
+        max-width: 1050px;
+        justify-content: center;
+      }
+      
+      .trio-box {
+        flex: 1;
+        background-color: white;
+        padding: 30px 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: "Space Mono", monospace;
+        text-align: center;
+      }
+      
+      /* LANGUAGES BOX */
+      .languages-box {
+        background-color: #c8661e;
+        color: white;
+      }
+      
+      .language-pill {
+        background-color: white;
+        color: #000000;
+        border-radius: 100px;
+        padding: 6px 12px;
+        margin: 10px auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .language-pill span {
+        background-color: #000000;
+        color: white;
+        border-radius: 50%;
+        padding: 4px 5px;
+        font-size: 12px;
+      }
+      
+      /* QUALITIES BOX */
+      .qualities-box {
+        background-color: #f5b92b;
+        color: white;
+      }
+      
+      .pill-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      
+      .pill-orange {
+        background-color: #c8661e;
+        color: white;
+
+      }
+      
+      /* REUSABLE PILL BASE */
+      .pill-trio {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 6px 16px;
+        border-radius: 100px;
+        display: inline-block;
+        white-space: nowrap;
+      }
+      
+      /* EDUCATION BOX */
+      .education-box {
+        background-color: #a67c52;
+        color: white;
+      }
+      
+      .education-box .block-paragraph {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-top: 15px;
+      }
+
+
+      .aboutme-bonus-row {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        max-width: 1050px;
+        justify-content: center;
+        align-items: stretch; /* ✨ equal height */
+        margin-top: -30px;
+      }
+      
+      .bonus-box {
+        flex: 1;
+        /* padding: 3px 20px; */
+        font-family: "Space Mono", monospace;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .piechart-img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
+      }
+      
+      .legend-list {
+        list-style: none;
+        padding-left: 0;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        max-width: 350px;
+        margin: 0 auto;
+      }
+      
+      .legend-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .legend-circle {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        line-height: 22px;
+      }
  
 /* ------------------------------------------------------------------------------ */
 /* PHONE VERSION */
@@ -948,15 +1098,51 @@ h2 {
   .aboutme-section {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
   .aboutme-block {
     width: 100%;
     max-width: 350px;
+    margin-top: 8px;
   }
 
   .pill-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .aboutme-trio-boxes {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .trio-box {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 8px;
+  }
+
+  .pill-group {
+    justify-content: center;
+  }
+
+  .language-pill {
+    justify-content: center;
+  }
+
+  .aboutme-bonus-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .bonus-box {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    align-items: center;
   }
   
   /* footer */
