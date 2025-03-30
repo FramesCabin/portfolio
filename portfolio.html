@@ -37,7 +37,7 @@
        padding: 0;
    }
    </style>
-
+   
   <title>FramesCabin | Portfolio</title>
 
 </head>
@@ -80,6 +80,34 @@
           </a>
           <p class="project-description">
             This is some concept art I created for my videogame proposal to the DADIU program. The artwork shows the prison island of the goddess Circe. Here, she explores and unravels its mysteries, crafts potions and casts enchantments to protect her nymphs. To unbound herself from her prison, she shall face 3 divine trials from Helios, Oceanos and Hecate which help her unlock the power of the island and her own. At the end, the player chooses how Circe gets her freedom: leave Aiaia for good, claim it as her own untouchable domain, or destroy it entirely along herself, defying the gods.
+          </p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <button class="carousel-button left">&#x25C0;</button>
+          <div class ="carousel-container">
+            <div class="carousel-track">
+              <img src="Images/Illustrations/general_1.png" alt="Illustration 1">
+              <img src="Images/Illustrations/general_2.png" alt="Illustration 2">
+              <img src="Images/Illustrations/general_3.png" alt="Illustration 3">
+              <img src="Images/Illustrations/halloween_1.png" alt="Halloween 1">
+              <img src="Images/Illustrations/halloween_2.png" alt="Halloween 2">
+              <img src="Images/Illustrations/primavera_1.png" alt="Primavera 1">
+              <img src="Images/Illustrations/primavera_2.png" alt="Primavera 2">
+              <img src="Images/Illustrations/primavera_3.png" alt="Primavera 3">
+            </div>
+          </div>
+          <button class="carousel-button right">&#x25B6;</button>
+        </div>
+
+        <div class="art-project">
+          <br/>
+          <p class="space-mono-regular">
+            Totebag design: Murcia's spring festival edition
+          </p>
+          <img class="thumbnail-showcase" src="Images/tote_primavera.png" alt="High-Res Art" />
+          <p class="project-description">
+            insert description.
           </p>
         </div>
 
@@ -171,5 +199,32 @@
 
   </div>
   
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.carousel-button.right');
+    const prevButton = document.querySelector('.carousel-button.left');
+  
+    let currentSlide = 0;
+  
+    function updateSlidePosition() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+  
+    nextButton.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateSlidePosition();
+    });
+  
+    prevButton.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      updateSlidePosition();
+    });
+  
+    window.addEventListener('resize', updateSlidePosition);
+    window.addEventListener('load', updateSlidePosition);
+  </script>
+
 </body>
 </html>
