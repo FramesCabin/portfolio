@@ -736,7 +736,6 @@ h2 {
 
       }
       
-      /* REUSABLE PILL BASE */
       .pill-trio {
         font-size: 16px;
         font-weight: 700;
@@ -763,9 +762,9 @@ h2 {
         display: flex;
         gap: 10px;
         width: 100%;
-        max-width: 1050px;
+        max-width: 650px;
         justify-content: center;
-        align-items: stretch; /* ✨ equal height */
+        align-items: stretch; 
         margin-top: -30px;
       }
       
