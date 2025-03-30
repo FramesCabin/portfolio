@@ -438,30 +438,51 @@ h2 {
     }
 
     .dropdown-info {
-      font-family: "Space Mono", monospace;
+      width: 100%;
       max-width: 600px;
-      margin-top: 20px;
-      background-color: #fefaf5;
-      border: 2px solid #f5b92b;
-      border-radius: 20px;
-      padding: 15px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
+      margin: 20px auto;
+      font-family: "Space Mono", monospace;
+      border: 2px solid #dca524;
+      border-radius: 12px;
+      padding: 10px;
+      background-color: #fff7ec;
+      overflow: hidden;
     }
     
     .dropdown-info summary {
       cursor: pointer;
       font-weight: bold;
       color: #f5b92b;
-      font-size: 16px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      list-style: none;
+      position: relative;
+      padding-left: 20px;
     }
     
-    .dropdown-info p {
-      margin-top: 10px;
-      color: #333;
+    .dropdown-info summary::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s ease;
+    }
+    
+    .dropdown-info[open] summary::before {
+      transform: rotate(90deg);
+    }
+    
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.6s ease;
       font-size: 14px;
-      line-height: 1.6;
+      padding: 10px;
+    }
+    
+    .dropdown-info[open] .dropdown-content {
+      max-height: 300px; /* adjust based on expected content height */
+      opacity: 1;
+      margin-top: 10px;
     }
 
 /* ------------------------------------------------------------------------------ */
