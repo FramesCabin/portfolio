@@ -125,14 +125,14 @@ window.onload = function init() {
 
     var decrease = document.getElementById("Decrement_button");
     decrease.addEventListener("click", function () {
-        if (subCount >= 0){
+        if (subCount >= 1){
             subCount--;
             finalVerts = [];
             initSphere(gl, subCount);
         }
     });
 
-    var isOrbiting = true; // Flag to control whether the camera orbits
+    var isOrbiting = false; // Flag to control whether the camera orbits
     var angle = 0.0; // Initial angle for orbiting
 
     // Event listener to toggle orbiting
